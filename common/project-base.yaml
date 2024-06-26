@@ -8,7 +8,7 @@ esphome:
   # configuration and updates.
   project:
     name: cblumer.project-defaults
-    version: 1.0.0
+    version: 1.0.1
 
 # To be able to get logs from the device via serial and api.
 logger:
@@ -22,13 +22,13 @@ api:
           format: "Client %s connected to API with IP %s"
           args: ["client_info.c_str()", "client_address.c_str()"]
           level: INFO
-          tag: api
+          tag: api.connection
   on_client_disconnected:
     then:
       - logger.log:
           format: "API client disconnected"
           level: INFO
-          tag: api
+          tag: api.connection
 
 # OTA is required for Over-the-Air updating
 ota:
@@ -97,6 +97,7 @@ sensor:
     name: "WiFi Signal dB"
     id: wifi_signal_db
     update_interval: 60s
+    disabled_by_default: true
     entity_category: "diagnostic"
 
   - platform: copy # Reports the WiFi signal strength in %
@@ -104,7 +105,8 @@ sensor:
     name: "WiFi Signal Percent"
     filters:
       - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
-    unit_of_measurement: "Signal %"
+    unit_of_measurement: "%"
+    disabled_by_default: true
     entity_category: "diagnostic"
     device_class: ""
 
@@ -117,36 +119,47 @@ text_sensor:
   - platform: wifi_info
     ip_address:
       name: IP Address
+      disabled_by_default: true
       entity_category: "diagnostic"
-      # address_0:
-      #   name: IP Address 0
-      #   entity_category: "diagnostic"
-      # address_1:
-      #   name: IP Address 1
-      #   entity_category: "diagnostic"
-      # address_2:
-      #   name: IP Address 2
-      #   entity_category: "diagnostic"
-      # address_3:
-      #   name: IP Address 3
-      #   entity_category: "diagnostic"
-      # address_4:
-      #   name: IP Address 4
-      #   entity_category: "diagnostic"
+      address_0:
+        name: IP Address 0
+        disabled_by_default: true
+        entity_category: "diagnostic"
+      address_1:
+        name: IP Address 1
+        disabled_by_default: true
+        entity_category: "diagnostic"
+      address_2:
+        name: IP Address 2
+        disabled_by_default: true
+        entity_category: "diagnostic"
+      address_3:
+        name: IP Address 3
+        disabled_by_default: true
+        entity_category: "diagnostic"
+      address_4:
+        name: IP Address 4
+        disabled_by_default: true
+        entity_category: "diagnostic"
     ssid:
       name: SSID Connected
+      disabled_by_default: true
       entity_category: "diagnostic"
     bssid:
       name: Connected BSSID
+      disabled_by_default: true
       entity_category: "diagnostic"
     mac_address:
       name: Wi-Fi MAC Address
+      disabled_by_default: true
       entity_category: "diagnostic"
     scan_results:
       name: Latest Scan Results
+      disabled_by_default: true
       entity_category: "diagnostic"
     dns_address:
       name: DNS Address
+      disabled_by_default: true
       entity_category: "diagnostic"
 
 button:

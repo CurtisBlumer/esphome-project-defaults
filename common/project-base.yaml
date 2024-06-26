@@ -113,6 +113,7 @@ sensor:
 binary_sensor:
   - platform: status
     name: "Home Assistant Status"
+    disabled_by_default: true
     entity_category: "diagnostic"
 
 text_sensor:

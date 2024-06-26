@@ -15,8 +15,6 @@ jobs:
           - debug-esp32.yaml
           - debug-esp8266.yaml
     steps:
-      - name: Cleanup files
-        uses: asenyaev/cleanup-action@v1
       - name: Checkout source code
         uses: actions/checkout@v2
       - name: Build ESPHome firmware to verify configuration

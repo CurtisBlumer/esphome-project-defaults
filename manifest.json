@@ -1,5 +1,5 @@
 {
-  "name": "Base ESPHome Project",
+  "name": "Debug ESPHome Project",
   "version": "",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,
@@ -7,12 +7,12 @@
     {
       "chipFamily": "ESP32",
       "ota": {
-        "path": "project-esp32-esp32/project-esp32-esp32.ota.bin",
-        "md5": "574293112f689e0433bf41a6da99c5f5"
+        "path": "debug-esp32-esp32/debug-esp32-esp32.ota.bin",
+        "md5": "8c7bc4546493a30b2ca2dc89c7227e9a"
       },
       "parts": [
         {
-          "path": "project-esp32-esp32/project-esp32-esp32.factory.bin",
+          "path": "debug-esp32-esp32/debug-esp32-esp32.factory.bin",
           "offset": 0
         }
       ]
@@ -20,12 +20,12 @@
     {
       "chipFamily": "ESP8266",
       "ota": {
-        "path": "project-esp8266-esp8266/project-esp8266-esp8266.ota.bin",
-        "md5": "d6c2128974f658beb52ddd4fe029fd82"
+        "path": "debug-esp8266-esp8266/debug-esp8266-esp8266.ota.bin",
+        "md5": "68c4652610dd8f6840ca22301c713646"
       },
       "parts": [
         {
-          "path": "project-esp8266-esp8266/project-esp8266-esp8266.factory.bin",
+          "path": "debug-esp8266-esp8266/debug-esp8266-esp8266.factory.bin",
           "offset": 0
         }
       ]

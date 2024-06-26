@@ -1,0 +1,16 @@
+esphome:
+  name: debug-esp32-psram
+  name_add_mac_suffix: true
+  project:
+    name: cblumer.debug-esp32-psram
+    version: 1.0.0
+
+packages:
+  project-esp32-psram: !include project-esp32-psram.yaml
+  debug-esp32: !include debug-esp32.yaml
+
+sensor:
+  - platform: debug
+    psram:
+      name: "PSRAM"
+      entity_category: "diagnostic"

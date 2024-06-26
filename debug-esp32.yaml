@@ -1,0 +1,10 @@
+esphome:
+  name: debug-esp32
+  name_add_mac_suffix: true
+  project:
+    name: cblumer.debug-esp32
+    version: 1.0.0
+
+packages:
+  project-esp32: !include project-esp32.yaml
+  debug-base: !include common/debug-base.yaml

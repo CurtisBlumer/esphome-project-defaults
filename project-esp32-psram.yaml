@@ -1,0 +1,10 @@
+esphome:
+  name: project-esp32-psram
+  project:
+    name: cblumer.project-esp32-psram
+    version: 1.0.0
+
+packages:
+  project-esp32: !include project-esp32.yaml
+
+psram:

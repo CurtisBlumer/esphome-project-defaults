@@ -1,0 +1,21 @@
+esphome:
+  name: debug-esp8266
+  name_add_mac_suffix: true
+  project:
+    name: cblumer.debug-esp8266
+    version: 1.0.0
+
+packages:
+  project-esp8266: !include project-esp8266.yaml
+  debug-base: !include common/debug-base.yaml
+
+sensor:
+  - platform: debug
+    fragmentation:
+      name: "Heap Fragmentation"
+      entity_category: "diagnostic"
+
+  - platform: adc
+    pin: VCC
+    name: "VCC Voltage"
+    entity_category: "diagnostic"

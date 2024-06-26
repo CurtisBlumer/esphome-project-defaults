@@ -8,7 +8,7 @@ esphome:
   # configuration and updates.
   project:
     name: cblumer.project-defaults
-    version: 1.0.1
+    version: 1.0.3
 
 # To be able to get logs from the device via serial and api.
 logger:
@@ -122,26 +122,26 @@ text_sensor:
       name: IP Address
       disabled_by_default: true
       entity_category: "diagnostic"
-      address_0:
-        name: IP Address 0
-        disabled_by_default: true
-        entity_category: "diagnostic"
-      address_1:
-        name: IP Address 1
-        disabled_by_default: true
-        entity_category: "diagnostic"
-      address_2:
-        name: IP Address 2
-        disabled_by_default: true
-        entity_category: "diagnostic"
-      address_3:
-        name: IP Address 3
-        disabled_by_default: true
-        entity_category: "diagnostic"
-      address_4:
-        name: IP Address 4
-        disabled_by_default: true
-        entity_category: "diagnostic"
+      # address_0:
+      #   name: IP Address 0
+      #   disabled_by_default: true
+      #   entity_category: "diagnostic"
+      # address_1:
+      #   name: IP Address 1
+      #   disabled_by_default: true
+      #   entity_category: "diagnostic"
+      # address_2:
+      #   name: IP Address 2
+      #   disabled_by_default: true
+      #   entity_category: "diagnostic"
+      # address_3:
+      #   name: IP Address 3
+      #   disabled_by_default: true
+      #   entity_category: "diagnostic"
+      # address_4:
+      #   name: IP Address 4
+      #   disabled_by_default: true
+      #   entity_category: "diagnostic"
     ssid:
       name: SSID Connected
       disabled_by_default: true

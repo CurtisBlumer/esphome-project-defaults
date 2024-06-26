@@ -10,9 +10,13 @@ jobs:
     strategy:
       matrix:
         file:
-          - project-template-esp32.yaml
-          - project-template-esp8266.yaml
+          - project-esp32.yaml
+          - project-esp8266.yaml
+          - debug-esp32.yaml
+          - debug-esp8266.yaml
     steps:
+      - name: Cleanup files
+        uses: asenyaev/cleanup-action@v1
       - name: Checkout source code
         uses: actions/checkout@v2
       - name: Build ESPHome firmware to verify configuration

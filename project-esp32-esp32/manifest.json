@@ -1,0 +1,13 @@
+{
+  "chipFamily": "ESP32",
+  "ota": {
+    "path": "project-esp32-esp32/project-esp32-esp32.ota.bin",
+    "md5": "0b8930289cc70a389057a87d3599b1c0"
+  },
+  "parts": [
+    {
+      "path": "project-esp32-esp32/project-esp32-esp32.factory.bin",
+      "offset": 0
+    }
+  ]
+}

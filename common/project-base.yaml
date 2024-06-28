@@ -155,10 +155,10 @@ text_sensor:
       name: Wi-Fi MAC Address
       disabled_by_default: true
       entity_category: "diagnostic"
-    scan_results:
-      name: Latest Scan Results
-      disabled_by_default: true
-      entity_category: "diagnostic"
+    # scan_results:
+    #   name: Latest Scan Results
+    #   disabled_by_default: true
+    #   entity_category: "diagnostic"
     dns_address:
       name: DNS Address
       disabled_by_default: true

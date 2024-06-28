@@ -31,34 +31,34 @@ api:
           tag: api.connection
 
 # OTA is required for Over-the-Air updating
-ota:
-  - platform: esphome
-    on_begin:
-      then:
-        - logger.log:
-            format: Over-the-Air updating started
-            level: INFO
-            tag: ota
-    on_progress:
-      then:
-        - logger.log:
-            format: "Over-the-Air update progress: %0.1f%%"
-            args: ["x"]
-            level: INFO
-            tag: ota
-    on_end:
-      then:
-        - logger.log:
-            format: Over-the-Air updating completed successfully
-            level: INFO
-            tag: ota
-    on_error:
-      then:
-        - logger.log:
-            format: "Over-the-Air update error: %d"
-            args: ["x"]
-            level: ERROR
-            tag: ota
+# ota:
+#   - platform: esphome
+#     on_begin:
+#       then:
+#         - logger.log:
+#             format: Over-the-Air updating started
+#             level: INFO
+#             tag: ota
+#     on_progress:
+#       then:
+#         - logger.log:
+#             format: "Over-the-Air update progress: %0.1f%%"
+#             args: ["x"]
+#             level: INFO
+#             tag: ota
+#     on_end:
+#       then:
+#         - logger.log:
+#             format: Over-the-Air updating completed successfully
+#             level: INFO
+#             tag: ota
+#     on_error:
+#       then:
+#         - logger.log:
+#             format: "Over-the-Air update error: %d"
+#             args: ["x"]
+#             level: ERROR
+#             tag: ota
 
 wifi:
   # Set up a wifi access point using the device name above

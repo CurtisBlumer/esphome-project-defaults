@@ -2,7 +2,7 @@
   "chipFamily": "ESP32",
   "ota": {
     "path": "debug-esp32-esp32/debug-esp32-esp32.ota.bin",
-    "md5": "31c5001a5d645740f9a47ab72a89f024"
+    "md5": "5cbae326789fa6e901f778ad7b693a0f"
   },
   "parts": [
     {

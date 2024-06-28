@@ -16,3 +16,9 @@ esp32_improv:
 
 packages:
   project-defaults: !include common/project-base.yaml
+
+sensor:
+- platform: internal_temperature
+  name: "Internal Temperature"
+  disabled_by_default: true
+  entity_category: "diagnostic"

@@ -4,6 +4,11 @@ esphome:
     name: cblumer.project-esp32-psram
     version: 1.0.0
 
+# Sets up Bluetooth LE (Only on ESP32) to allow the user
+# to provision wifi credentials to the device.
+esp32_improv:
+  authorizer: none
+
 packages:
   project-esp32: !include project-esp32.yaml
 

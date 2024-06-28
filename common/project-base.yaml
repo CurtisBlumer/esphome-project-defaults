@@ -91,6 +91,7 @@ web_server:
 sensor:
   - platform: uptime
     name: Uptime
+    disabled_by_default: true
     entity_category: "diagnostic"
 
   - platform: wifi_signal # Reports the WiFi signal strength/RSSI in dB
@@ -166,3 +167,4 @@ text_sensor:
 button:
   - platform: restart
     name: "Restart"
+    disabled_by_default: true
